@@ -1,0 +1,15 @@
+name: ChamaVoteManager
+main: com.github.unchama.chamavotemanager.ChamaVoteManager
+version: 0.0.1
+
+commands:
+  chamavote:
+      description: This is a chamavote command.
+      usage: /<command> <help>
+      permission: chamavotemanager.vote
+      permission-message: You don't have <permission>
+  chamasum:
+      description: This is a chamasum command.
+      usage: /<command> <help>
+      permission: multiseichiplugin.seichi
+      permission-message: You don't have <permission>
