@@ -28,6 +28,7 @@ public class csumCommand implements TabExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd,
 			String label, String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
+
 		return false;
 	}
 

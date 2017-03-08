@@ -45,7 +45,7 @@ public class cvoteCommand implements TabExecutor {
 			Set<ProtectedRegion> s = Util.getWorldGuard().getRegionManager(player.getWorld()).getApplicableRegions(player.getLocation()).getRegions();
 			// 保護が1つじゃなかったらreturn
 			if(s.size()!=1){
-				sender.sendMessage(ChatColor.GREEN + "保護が1つのみの場所で実行して下さい");
+				sender.sendMessage(ChatColor.GREEN + "保護が無いか、重なっているようです。保護が1つだけの場所で実行して下さい");
 				return true;
 			}
 			ProtectedRegion r = s.iterator().next();
@@ -56,10 +56,17 @@ public class cvoteCommand implements TabExecutor {
 			}
 			UUID u = r.getOwners().getUniqueIds().iterator().next();
 
-			plugin.getConfig().set(player.getUniqueId().toString(),
+			//投票者のMinecraftIDとUUIDを紐づけて記録
+			plugin.getConfig().set("candidate."+player.getUniqueId().toString(), player.getName().toLowerCase());
+
+			//投票者と投票先のuuidを紐づけて記録
+			plugin.getConfig().set("voter."+player.getUniqueId().toString(),
 					u.toString());
 			plugin.saveConfig();
-			sender.sendMessage(ChatColor.GREEN + u.toString() + "に投票しました。再度コマンドを実行すると投票先をいつでも変更出来ます");
+
+			//UUIDからの名前解決を試行
+			String tovoteid = plugin.getConfig().getString("candidate."+u.toString());
+			sender.sendMessage(ChatColor.GREEN + tovoteid +"に投票しました。再度コマンドを実行すると投票先をいつでも変更出来ます");
 			return true;
 		}
 		return false;
