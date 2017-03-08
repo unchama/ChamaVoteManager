@@ -3,13 +3,13 @@ main: com.github.unchama.chamavotemanager.ChamaVoteManager
 version: 0.0.1
 
 commands:
-  chamavote:
+  cvote:
       description: This is a chamavote command.
       usage: /<command> <help>
       permission: chamavotemanager.vote
       permission-message: You don't have <permission>
-  chamasum:
+  csum:
       description: This is a chamasum command.
       usage: /<command> <help>
-      permission: multiseichiplugin.seichi
+      permission: chamavotemanager.sum
       permission-message: You don't have <permission>
