@@ -13,3 +13,8 @@ commands:
       usage: /<command> <help>
       permission: chamavotemanager.sum
       permission-message: You don't have <permission>
+  cvotedelete:
+      description: This is a chamasum command.
+      usage: /<command> <help>
+      permission: chamavotemanager.sum
+      permission-message: You don't have <permission>
