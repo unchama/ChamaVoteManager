@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.github.unchama.chamavotemanager.commands.csumCommand;
 import com.github.unchama.chamavotemanager.commands.cvoteCommand;
+import com.github.unchama.chamavotemanager.commands.cvotedeleteCommand;
 
 
 
@@ -35,6 +36,7 @@ public class ChamaVoteManager extends JavaPlugin implements Listener {
 		commandlist = new HashMap<String, TabExecutor>();
 		commandlist.put("cvote",new cvoteCommand(plugin));
 		commandlist.put("csum",new csumCommand(plugin));
+		commandlist.put("cvotedelete",new cvotedeleteCommand(plugin));
 	}
 
 	public void onDisable() {
