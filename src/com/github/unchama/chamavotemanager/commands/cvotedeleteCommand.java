@@ -2,6 +2,7 @@ package com.github.unchama.chamavotemanager.commands;
 
 import java.util.List;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -27,6 +28,7 @@ public class cvotedeleteCommand implements TabExecutor{
 	public boolean onCommand(CommandSender sender, Command cmd,
 			String label, String[] args) {
 
+		sender.sendMessage(ChatColor.RED + "未実装ナリ");
 		return true;
 	}
 }

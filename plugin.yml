@@ -1,6 +1,6 @@
 name: ChamaVoteManager
 main: com.github.unchama.chamavotemanager.ChamaVoteManager
-version: 0.0.1
+version: 0.0.2
 
 commands:
   cvote:
@@ -16,5 +16,5 @@ commands:
   cvotedelete:
       description: This is a chamasum command.
       usage: /<command> <help>
-      permission: chamavotemanager.sum
+      permission: chamavotemanager.sum.delete
       permission-message: You don't have <permission>
